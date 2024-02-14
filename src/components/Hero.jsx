@@ -85,6 +85,12 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: #6a0dad;
+  }
 `;
 
 const Right = styled.div`
@@ -120,9 +126,15 @@ const Img = styled.img`
   }
 `;
 
+const CustomLink = styled.a`
+  text-decoration: none; /* Remove underline */
+  outline: none; /* Remove outline */
+  color: inherit; /* Inherit color from parent */
+`;
+
 const Hero = () => {
   return (
-    <Section>
+    <Section id="home">
       <Navbar />
       <Container>
         <Left>
@@ -132,9 +144,9 @@ const Hero = () => {
             <Subtitle>What we Do</Subtitle>
           </WhatWeDo>
           <Desc>
-            we enjoy creating delightful, human-centered digital experiences.
+          Ready to propel your career forward? Join our jobathon and land your dream role!
           </Desc>
-          <Button>Learn More</Button>
+          <Button><CustomLink href="https://www.youtube.com">Register Now</CustomLink></Button>
         </Left>
         <Right>
           <Canvas>

@@ -97,7 +97,7 @@ const Right = styled.div`
 const Works = () => {
   const [work, setWork] = useState("Web Design");
   return (
-    <Section>
+    <Section id="work">
       <Container>
         <Left>
           <List>

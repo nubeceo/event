@@ -46,6 +46,7 @@ const Input = styled.input`
   background-color: #e8e6e6;
   border: none;
   border-radius: 5px;
+  color: black;
 `;
 
 const TextArea = styled.textarea`
@@ -53,6 +54,8 @@ const TextArea = styled.textarea`
   border: none;
   border-radius: 5px;
   background-color: #e8e6e6;
+  color: black;
+  
 `;
 
 const Button = styled.button`
@@ -99,7 +102,7 @@ const Contact = () => {
       );
   };
   return (
-    <Section>
+    <Section id="contact">
       <Container>
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>

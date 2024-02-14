@@ -76,6 +76,17 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: #6a0dad;
+  }
+`;
+const CustomLink = styled.a`
+  text-decoration: none; /* Remove underline */
+  outline: none; /* Remove outline */
+  color: inherit; /* Inherit color from parent */
 `;
 
 const Who = () => {
@@ -102,7 +113,7 @@ const Who = () => {
             a creative group of designers and developers with a passion for the
             arts.
           </Desc>
-          <Button>See our works</Button>
+          <Button><CustomLink href="https://www.youtube.com">Register Now</CustomLink></Button>
         </Right>
       </Container>
     </Section>

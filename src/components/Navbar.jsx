@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+
+
+
 const Section = styled.div`
   display: flex;
   justify-content: center;
@@ -66,6 +69,25 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: #6a0dad;
+  }
+`;
+
+const CustomLink = styled.a`
+  text-decoration: none; /* Remove underline */
+  outline: none; /* Remove outline */
+  color: inherit; /* Inherit color from parent */
+`;
+
+const MoneyText = styled.span`
+  color: white; /* Text color for Money */
+`;
+
+const ViewText = styled.span`
+  color: orange; /* Text color for View */
 `;
 
 const Navbar = () => {
@@ -73,18 +95,17 @@ const Navbar = () => {
     <Section>
       <Container>
         <Links>
-          <Logo src="./img/logo.png" />
+        <MoneyText>Money <ViewText>View</ViewText></MoneyText>
+          
           <List>
-            <ListItem>Home</ListItem>
-            <ListItem>Login</ListItem>
-            <ListItem>Works</ListItem>
-            <ListItem>Contact</ListItem>
+          <ListItem><CustomLink href="#home">Home</CustomLink></ListItem>
+            <ListItem><CustomLink href="#work">Works</CustomLink></ListItem>
+            <ListItem><CustomLink href="#contact">Contact</CustomLink></ListItem>
           </List>
         </Links>
         <Icons>
           {/* Changed the image due to copyright problems */}
-          <Icon src="./img/search.png" />
-          <Button>Register Now</Button>
+          <Button ><CustomLink href="https://www.youtube.com">Register Now</CustomLink></Button>
         </Icons>
       </Container>
     </Section>
